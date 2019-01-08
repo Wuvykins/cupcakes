@@ -7,6 +7,14 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+$cupcakes = [
+    "grasshopper" => "The Grasshopper",
+    "carrot" => "Carrot Walnut",
+    "caramel" => "Salted Caramel Cupcake",
+    "velvet" => "Red Velvet",
+    "lemon" => "Lemon Drop",
+    "tiramisu" => "Tiramisu"
+];
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,24 +33,13 @@ error_reporting(E_ALL);
     </fieldset>
 
     <fieldset>
-        <legend>Flayvers</legend>
-        <label>
-            <input type="checkbox" value="The Grasshopper" name="options[]">&nbsp;The Grasshopper</label>
-        <br>
-        <label>
-            <input type="checkbox" value="Carrot Walnut" name="options[]">&nbsp;Carrot Walnut</label>
-        <br>
-        <label>
-            <input type="checkbox" value="Salted Caramel Cupcake" name="options[]">&nbsp;Salted Caramel Cupcake</label>
-        <br>
-        <label>
-            <input type="checkbox" value="Red Velvet" name="options[]">&nbsp;Red Velvet</label>
-        <br>
-        <label>
-            <input type="checkbox" value="Lemon Drop" name="options[]">&nbsp;Lemon Drop</label>
-        <br>
-        <label>
-            <input type="checkbox" value="Tiramisu" name="options[]">&nbsp;Tiramisu</label>
+        <legend>Type of cupcakes</legend>
+            <?php
+            foreach($cupcakes as $key => $cupcake) {
+                echo "<input type='checkbox' name='flavor[]' value='$cupcake'";
+                echo "<label>&nbsp;$cupcake</label><br>";
+            }
+            ?>
     </fieldset>
     <br>
     <input type="submit" name="btnSubmit" value="Submit your order" id="submit">
