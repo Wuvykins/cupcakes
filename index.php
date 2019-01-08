@@ -53,7 +53,7 @@ if($isValid && !empty($_POST)) {
 
     <fieldset>
         <?php
-        if(!empty($flavorError)) { echo "<p style='color:red'>$flavError</p>"; }
+        if(!empty($flavError)) { echo "<p style='color:red'>$flavError</p>"; }
         if(!empty($faultyInfo)) { echo "<p style='color:red'>$faultyInfo</p>"; }
         ?>
         <legend>Type of cupcakes</legend>

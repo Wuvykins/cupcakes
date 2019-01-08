@@ -14,7 +14,7 @@ if(empty($_POST['name'])) {
 
 //check if a flavor is checked
 if(empty($_POST['flavor'])) {
-    $flavorError = "Please select a flavor of cupcake";
+    $flavError = "Please select a flavor of cupcake";
     $isValid = false;
 }
 
